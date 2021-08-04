@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProdutoTest {
 
-    // public Produto(String nome, int qtdeEstoque, Integer precoUnit, int estoqueMaximo, int estoqueMinimo) {
+
     @Test
     void deveRetonarNomeObrigatorio() {
         try {
@@ -80,7 +80,7 @@ class ProdutoTest {
         }
     }
 
-    // LETRA A
+
 
     @Test
     public void retornaQuantidadeDebitadaEstoque() {
@@ -113,7 +113,7 @@ class ProdutoTest {
 
     }
 
-    // LETRA B
+
 
     @Test
     public void retornaQuantidadeCreditarEstoque() {
@@ -146,7 +146,7 @@ class ProdutoTest {
 
     }
 
-    // LETRA C
+
 
     @Test
     public void retornaEstoqueAbaixoDoEstoqueMinimo() {
@@ -198,7 +198,6 @@ class ProdutoTest {
 
     }
 
-    // LETRA E
 
     @Test
     public void retornaQuantidadeTrueParaQuantidadeExcedente() {
@@ -223,7 +222,7 @@ class ProdutoTest {
         }
     }
 
-    // LETRA F
+
 
     @Test
     public void retornaParametroInvalidoParaValorVenda() {
@@ -253,7 +252,6 @@ class ProdutoTest {
         }
     }
 
-    // LETRA G
 
     @Test
     public void deveRetornarSemTranscaoAdicionadaNoHistorico() {
@@ -288,7 +286,7 @@ class ProdutoTest {
         assertEquals(3, produto.historico.size());
     }
 
-    // LETRA H
+
 
     @Test
     public void deveRetornarSemTranscaoDeCompraAdicionadaNoHistorico() {
