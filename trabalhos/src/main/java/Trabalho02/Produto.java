@@ -21,7 +21,7 @@ public class Produto {
     public Produto(String nome, int qtdeEstoque, Integer precoUnit, int estoqueMaximo, int estoqueMinimo) {
         if (nome == null) {
             throw new IllegalArgumentException("Nome Obrigatorio");
-        } else if (qtdeEstoque <= 0) {
+        } else if (qtdeEstoque < 0) {
             throw new IllegalArgumentException("Parametro invalido para Quant. Estoque");
         } else if (precoUnit <= 0) {
             throw new IllegalArgumentException("Parametro invalido para Preco Unitario");
@@ -37,6 +37,11 @@ public class Produto {
         this.estoqueMaximo = estoqueMaximo;
         this.estoqueMinimo = estoqueMinimo;
 
+    }
+
+    public void setQtdeEstoque(int qtdeEstoque) {
+
+        this.qtdeEstoque = qtdeEstoque;
     }
 
     public Integer getPrecoUnit() {
@@ -111,6 +116,7 @@ public class Produto {
         if(venda.vender(this, qtdeVendida)) {
 
             String novaVenda =
+                    "Nova Venda Realizada: " +
                     " Cliente: " + cliente.getNome() +
                     " | Produto: " + this.nome +
                     " | Data: " + dataVenda +
@@ -137,21 +143,5 @@ public class Produto {
             registrarHistorico(novaCompra);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

@@ -54,15 +54,6 @@ class ProdutoTest {
 
 
     @Test
-    void deveRetonarqtdeEstoqueObrigatorio2() {
-        try {
-            Produto produto = new Produto("SSD", 0, 560, 150, 20);
-        } catch (IllegalArgumentException e) {
-            assertEquals("Parametro invalido para Quant. Estoque", e.getMessage());
-        }
-    }
-
-    @Test
     void deveRetonarPrecoObrigatorio2() {
         try {
             Produto produto = new Produto("SSD", 90, 0, 150, 20);
