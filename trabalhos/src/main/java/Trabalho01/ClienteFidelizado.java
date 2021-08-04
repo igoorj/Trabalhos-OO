@@ -1,3 +1,9 @@
+/*
+ * @author: Igor Jose Costa Gonçalves
+ * @Matricula: 202065138A
+ * Trabalho-02
+ *
+ * */
 package Trabalho01;
 
 public class ClienteFidelizado extends Cliente{

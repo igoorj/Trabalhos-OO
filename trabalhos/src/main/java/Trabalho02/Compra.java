@@ -1,3 +1,15 @@
+/*
+ * @author: Igor Jose Costa Gonçalves
+ * @Matricula: 202065138A
+ * Trabalho-02
+ *
+ * */
+/*
+ * @author: Igor Jose Costa Gonçalves
+ * @Matricula: 202065138A
+ * Trabalho-02
+ *
+ * */
 package Trabalho02;
 
 public class Compra extends Transacao {
@@ -6,20 +18,33 @@ public class Compra extends Transacao {
     protected Integer precoUnit;
 
     public Compra(String dataCompra, Produto produto, Fornecedor fornecedor, int qntdCompra, Integer precoUnit) {
-
         super(dataCompra, qntdCompra, produto);
 
-        if(produto == null) {
-            throw new IllegalArgumentException("Produto obrigatorio");
-        }
-        if(qntdCompra == 0) {
-            throw new IllegalArgumentException("Quantidade obrigatorio");
-        }
-        if(precoUnit == null) {
+        if(fornecedor == null) {
+
+            throw new IllegalArgumentException("Fornecedor obrigatorio");
+
+        } else if(precoUnit == null) {
+
             throw new IllegalArgumentException("Preco unitario obrigatorio");
         }
 
         this.fornecedor = fornecedor;
         this.precoUnit = precoUnit;
+
+
+    }
+
+    public boolean comprar(Produto produto, int qtdeCompra) {
+
+        boolean verify = produto.verificarEstoqueExcedente(qtdeCompra);
+
+        if(verify) {
+            System.out.println("Quantidade superior ao estoque maximo registrado");
+            return false;
+        } else {
+            produto.creditarEstoque(qtdeCompra);
+            return true;
+        }
     }
 }

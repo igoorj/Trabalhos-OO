@@ -1,25 +1,33 @@
+/*
+ * @author: Igor Jose Costa Gonçalves
+ * @Matricula: 202065138A
+ * Trabalho-02
+ *
+ * */
+/*
+ * @author: Igor Jose Costa Gonçalves
+ * @Matricula: 202065138A
+ * Trabalho-02
+ *
+ * */
 package Trabalho02;
 
 public class Transacao {
 
     protected String dataTransacao;
     protected Produto produto;
-    protected int qntd;
+    protected int qntdVendida;
 
     public Transacao(String dataTransicao, int qntdVendida, Produto produto) {
-    }
-
-    public void setQntd(int qntd) {
-
-        if (qntd == 0) {
+        if (qntdVendida == 0) {
             throw new IllegalArgumentException("Quantidade obrigatoria");
-        }
-        if (produto == null) {
+        } else if (produto == null) {
             throw new IllegalArgumentException("Produto obrigatorio");
         }
 
         this.dataTransacao = dataTransacao;
         this.produto = produto;
-        this.qntd = qntd;
+        this.qntdVendida = qntdVendida;
     }
+
 }
