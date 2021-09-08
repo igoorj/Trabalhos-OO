@@ -1,8 +1,5 @@
 package Trabalho03;
 
-import Trabalho02.Fornecedor;
-import Trabalho02.Produto;
-
 public class Aquisicao {
 
     protected int quantidadeLivros;

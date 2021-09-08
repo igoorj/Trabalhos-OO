@@ -40,22 +40,6 @@ public class Autor implements Pessoa{
         return this.dataNascimento;
     }
 
-    public class Endereco {
-
-        private String logradouro;
-        private String cidade;
-        private String estado;
-        private String bairro;
-
-        public Endereco(String logradouro, String cidade, String estado, String bairro) {
-            this.logradouro = logradouro;
-            this.cidade = cidade;
-            this.estado = estado;
-            this.bairro = bairro;
-        }
-
-    }
-
     public List<Livro> getObras() {
         return this.obras;
     }
@@ -80,4 +64,21 @@ public class Autor implements Pessoa{
         }
         return this.historicoCompra;
     }
+
+    public class Endereco {
+
+        private String logradouro;
+        private String cidade;
+        private String estado;
+        private String bairro;
+
+        public Endereco(String logradouro, String cidade, String estado, String bairro) {
+            this.logradouro = logradouro;
+            this.cidade = cidade;
+            this.estado = estado;
+            this.bairro = bairro;
+        }
+
+    }
+
 }

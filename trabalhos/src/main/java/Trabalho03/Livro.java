@@ -54,28 +54,6 @@ public class Livro {
         return this.editora;
     }
 
-    public class Formato {
-
-        private String formato;
-
-        public Formato(String formato) {
-            super();
-            this.formato = formato;
-        }
-
-        private void setFormato(String formato) {
-            if(formato == null) {
-                throw new IllegalArgumentException("Formato Obrigatorio");
-            }
-            this.formato = formato;
-        }
-
-        public String getFormato() {
-
-            return this.formato;
-        }
-    }
-
     public float getPrecoFinal() {
         return this.preco + Editora.getTaxaCustoProducao();
     }
@@ -102,6 +80,28 @@ public class Livro {
 
     public Autor getAutor() {
         return this.autor;
+    }
+
+    public class Formato {
+
+        private String formato;
+
+        public Formato(String formato) {
+            super();
+            this.formato = formato;
+        }
+
+        private void setFormato(String formato) {
+            if(formato == null) {
+                throw new IllegalArgumentException("Formato Obrigatorio");
+            }
+            this.formato = formato;
+        }
+
+        public String getFormato() {
+
+            return this.formato;
+        }
     }
 
 }
